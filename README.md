@@ -8,7 +8,7 @@ This little hacky bash script asks you for a name of an classroom exercise and c
 
 
 ### Preparation
-- Add the github account names of your students inside the `usersArr` 
+- Add the github account names of your students inside the `usersArr` and in line 45 add your classroom in the url
 - make the script executable
 - if you llike make it globally available to start it from everywhere or copy it inside a folder where you wanne have the cloned repos and start from there
 
