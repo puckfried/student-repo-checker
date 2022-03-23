@@ -42,7 +42,7 @@ for i in ${!usersArr[@]}; do
     echo "Trying to get repo of "${username}""
     
     # clone the repo of the user
-    git clone "git@github.com:FbW-WD-22-D01/"${repoName}"-"${username}".git"
+    git clone "git@github.com:<YOURCLASSROOM>/"${repoName}"-"${username}".git"
     
 
     # check if directory was created and if count commits
