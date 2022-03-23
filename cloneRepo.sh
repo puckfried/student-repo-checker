@@ -41,7 +41,7 @@ for i in ${!usersArr[@]}; do
     username="${usersArr[i]}"
     echo "Trying to get repo of "${username}""
     
-    # clone the repo of the user
+    # clone the repo of the user, before first start add your classroom here
     git clone "git@github.com:<YOURCLASSROOM>/"${repoName}"-"${username}".git"
     
 
