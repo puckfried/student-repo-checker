@@ -2,7 +2,7 @@
 echo "Name of repo"
 read repoName
 
-arrayUser=("AlonaWeizel" "makombengas" "CarinaBoehm" "nang92" "heikofresh" "tonyfverdu" "dimilidi" "maikklemm" "Baba3200" "Martyna1202" "Orianaqh" "paulinahry" "Raouia2011" "mohsenreza1" "SasaJovanovic90" "SoerenDCI" "Timon24h" "H0sc" "vladko27")
+arrayUser=("student1" "student2" "student3")
 
 #  getting the whole array and go through indexes 
 for i in ${!arrayUser[@]}; do
