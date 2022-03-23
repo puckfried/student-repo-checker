@@ -20,4 +20,4 @@ As said before it is a very hacky way to avoid the annoying gh classroom clickba
 1. it clones every repo of the given exercise
 2. it checks how many commits are done, normally there are 3 commits if no changes were done by the students (*Initial commit, Github Classroom Feedback, Setting up Github Classroom Feedback - this is probably not 100%, just saying ;-)*)  
 3. if there are too less commits the repo is deleted again
-4. student.txt is created with the informations collected while the steps before
+4. student.txt is created with the informations collected...
