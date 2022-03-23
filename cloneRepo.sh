@@ -1,18 +1,45 @@
-# read repo name
-echo "Which repo you wanne check??"
-read repoName
+# prompt for getting repo name
+clear
 
-usersArr=("AlonaWeizel" "makombengas" "CarinaBoehm" "nang92" "heikofresh" "tonyfverdu" "dimilidi" "maikklemm" "Baba3200" "Martyna1202" "Orianaqh" "paulinahry" "Raouia2011" "mohsenreza1" "SasaJovanovic90" "SoerenDCI" "Timon24h" "H0sc" "vladko27" "puckfried")
+cat << "EOF"
 
+                      ********** REPO CHECK **********"
+
+.------------------------------------------------------------------------------.
+|                  .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.                   |
+|                 MMMMMMMM'  `"MMMMM"""""""MMMM""`  'MMMMMMMM                  |
+|                MMMMMMMMM                           MMMMMMMMM                 |
+|               MMMMMMMMMM:                         :MMMMMMMMMM                |
+|              .MMMMMMMMMM                           MMMMMMMMMM.               |
+|              MMMMMMMMM"                             "MMMMMMMMM               |
+|              MMMMMMMMM          O          O         MMMMMMMMM               |
+|              MMMMMMMMM                               MMMMMMMMM               |
+|              MMMMMMMMMM                             MMMMMMMMMM               |
+|              `MMMMMMMMMM                           MMMMMMMMMM`               |
+|               MMMMMMMMMMMM.                     .MMMMMMMMMMMM                |
+|                MMMMMM  MMMMMMMMMM         MMMMMMMMMMMMMMMMMM                 |
+|                 MMMMMM  'MMMMMMM           MMMMMMMMMMMMMMMM                  |
+|                  `MMMMMM  "MMMMM           MMMMMMMMMMMMMM`                   |
+|                    `MMMMMm                 MMMMMMMMMMMM`                puck |
+'------------------------------------------------------------------------------'  
+
+EOF
+
+
+read -p "Enter Repo name: " repoName
+
+# github account names
+usersArr=("student1" "student2" "student3")
+
+# Create empty Arrays
 studenstNot=()
 studentsAccept=()
 studentsSolve=()
 
 #  getting the whole array and go through indexes 
 for i in ${!usersArr[@]}; do
-    
     username="${usersArr[i]}"
-    echo $username
+    echo "Trying to get repo of "${username}""
     
     # clone the repo of the user
     git clone "git@github.com:FbW-WD-22-D01/"${repoName}"-"${username}".git"
@@ -22,8 +49,9 @@ for i in ${!usersArr[@]}; do
     if [ -d "./"${repoName}"-"${username}"" ]
     then 
         commitCount=$(git --git-dir=./"${repoName}"-"${username}"/.git shortlog | grep -E '^[ ]+\w+' | wc -l)
-        echo "We have - ${commitCount}"
-        # if to less commits delete the repo
+        echo "We have - ${commitCount} commits"
+        
+        # if to less commits (3 or equal) delete the repo, student did no change anything
         if [ "$commitCount" -le 3 ] 
             then
                 studentsAccept+=("${username}")
@@ -37,8 +65,8 @@ for i in ${!usersArr[@]}; do
     fi
 done
 
+# Print the result and copy it to result.txt
 clear
-
 output="
 ***************** Result ****************
 
