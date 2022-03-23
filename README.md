@@ -1,7 +1,7 @@
 # Student Github Repo Checker
 
 ### About
-This little hacky bash script asks you for a name of an classroom exercise and clones in the current folder those student repos, that have already changes which have been pushed. So you have a collection of the repos you wanne check. For helping you with your classbook it returns a list of your students who: 
+This little hacky bash script asks takes a name of an classroom exercise and clones those student repos, that have already pushed changes. So you get a collection of the repos you wanne check in the current folder. In addition it returns a list in a .txt file of your students who: 
     a) did not started with the exercise (the repo was not build yet) 
     b) did not push their changes
     c) pushed the changes  
