@@ -18,6 +18,6 @@ This little hacky bash script asks you for a name of an classroom exercise and c
 
 As said before it is a very hacky way to avoid the annoying gh classroom clickbait. Following steps are done:
 1. it clones every repo of the given exercise
-2. it checks how many commits are done, if there are no changes 3 commits are printed (while testing it was ok, but it is not the best way)  
+2. it checks how many commits are done, normally there are 3 commits if no changes were done by the students (*Initial commit, Github Classroom Feedback, Setting up Github Classroom Feedback - this is probably not 100%, just saying ;-)*)  
 3. if there are too less commits the repo is deleted again
 4. student.txt is created with the informations collected while the steps before
