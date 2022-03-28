@@ -8,7 +8,8 @@ c). pushed the changes
 as a .txt file...
 
 ### Preparation
-- Add the github account names of your students inside the `usersArr` and in line 45 add your classroom in the url
+- in line 32 -> add the github account names of your students inside the `usersArr` 
+- in line 45 -> add your class organisation in the url
 - make the script executable
 - if you llike make it globally available to start it from everywhere or copy it inside a folder where you wanne have the cloned repos and start from there
 

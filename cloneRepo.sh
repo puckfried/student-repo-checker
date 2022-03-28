@@ -41,11 +41,11 @@ for i in ${!usersArr[@]}; do
     username="${usersArr[i]}"
     echo "Trying to get repo of "${username}""
     
-# BEFORE FIRST START: add your classroom here
-    git clone "git@github.com:<YOURCLASSROOM>/"${repoName}"-"${username}".git"
+# BEFORE FIRST START: add your class organization here - the lines clones the exercise repo of your students
+    git clone "git@github.com:<YOURCLASSORGA>/"${repoName}"-"${username}".git"
     
 
-    # check if directory was created and if count commits
+    # check if directory was created and if, count commits
     if [ -d "./"${repoName}"-"${username}"" ]
     then 
         commitCount=$(git --git-dir=./"${repoName}"-"${username}"/.git shortlog | grep -E '^[ ]+\w+' | wc -l)
