@@ -28,7 +28,7 @@ EOF
 
 read -p "Enter Repo name: " repoName
 
-# github account names
+# FILL THE github account names HERE
 usersArr=("student1" "student2" "student3")
 
 # Create empty Arrays
